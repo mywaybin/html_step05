@@ -16,5 +16,29 @@ $(function () {
         pauseOnFocus: false
     });
 
+    $('.mainSlide').on('afterChange', function (e, s, c) {
+        $('.main_dots li').eq(c).addClass('on')
+            .siblings().removeClass('on');
+        $('.mainVisual .main_num').text(c + 1)
+    });
 
-});
+    $('.main_dots li').on('click', function () {
+        var idx = $(this).index();
+        $('.mainSlide').slick('slickGoTo', idx)
+    })
+
+    $('.main_pro_slide').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 5,
+    });
+
+    $('.mainProduct .arrows .Prev').on('click', function () {
+        $('.main_pro_slide').slick('slickPrev')
+    });
+
+    $('.mainProduct .arrows .Next').on('click', function () {
+        $('.main_pro_slide').slick('slickNext')
+    });
+
+})
