@@ -340,7 +340,7 @@
 .mainBanner {
     padding: 100px 0;
     text-align: center;
-    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+    background: url(../images/mainvisual01.jpg) no-repeat fixed center center/cover;
     color: #fff;
 
     filter: grayscale(1);
@@ -357,7 +357,7 @@
     font-weight: 300;
     margin: 0 0 30px 0;
 
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     padding: 50px 0;
 }
 
@@ -451,4 +451,140 @@
     color: #fff;
     font-size: 12px;
     border-radius: 50%;
+}
+
+.mainCustomer {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.mainCustomer .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainCustomer .inner>div {
+    flex: 1;
+    overflow: hidden;
+}
+
+.mainCustomer .tab_menu {
+    display: table;
+    width: 100%;
+}
+
+.mainCustomer .tab_menu>li {
+    display: table-cell;
+}
+
+.mainCustomer .tab_menu>li~li {
+    border-left: 1px solid transparent;
+}
+
+.mainCustomer .tab_menu>li a {
+    display: block;
+    padding: 10px 60px 10px 10px;
+    background: #ff6347;
+    color: #fff;
+}
+
+.mainCustomer .tab_menu>li.on a {
+    background: #333;
+}
+
+.mainCustomer .tab_content>li {
+    display: none;
+    line-height: 36px;
+}
+
+.mainCustomer .tab_content>li.on {
+    display: block;
+}
+
+.mainCustomer .tab_content>li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mainCustomer .tab_content>li li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.mainCustomer .tab_content>li li span {
+    margin: 0 0 0 20px;
+}
+
+.mainCustomer .right img {
+    width: 100%;
+}
+
+.footer {
+    background: #343a40;
+    color: #f8f9fa;
+    padding: 0 0 50px 0;
+}
+
+.footer .top {
+    line-height: 80px;
+    border-bottom: 1px solid #555;
+}
+
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .top .left {
+    font-size: 0;
+}
+
+.footer .top .left li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.footer .top .left li~li::before {
+    content: "";
+    margin: 0 20px;
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #ddd;
+}
+
+.footer .top .right {
+    display: flex;
+    gap: 2px;
+    font-size: 0;
+}
+
+.footer .top .right i {
+    font-size: 20px;
+    padding: 10px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.footer .bottom {
+    line-height: 80px;
+}
+
+#f_link {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    background: #343a40;
+    border: 1px solid #555;
+}
+
+#f_link option {
+    padding: 5px 20px;
 }
